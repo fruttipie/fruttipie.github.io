@@ -2,6 +2,7 @@ const themeToggle = document.getElementById("theme-toggle");
 const prefersDarkQuery = window.matchMedia("(prefers-color-scheme: dark)") //media query
 const moon = document.getElementById("moon");
 const sun = document.getElementById("sun");
+const itchio = document.getElementById("itchio");
 
 // For setting the theme to match the user's computer's theme.
 window.addEventListener("load", () => {
