@@ -6,15 +6,15 @@ const itchio = document.getElementById("itchio");
 
 // For setting the theme to match the user's computer's theme.
 window.addEventListener("load", () => {
-    if (prefersDarkQuery.matches) {
+    if (prefersDarkQuery.matches){
         toggleMode();
     } else {
         setIcon("sun");
     }
 });
 
-function setIcon(icon) { // for example: setIcon("moon") will set the icon TO the moon
-    if (icon === "moon") {
+function setIcon(icon){ // for example: setIcon("moon") will set the icon TO the moon
+    if (icon === "moon"){
         moon.classList.remove("hidden");
         sun.classList.add("hidden");
     } else {
@@ -24,9 +24,9 @@ function setIcon(icon) { // for example: setIcon("moon") will set the icon TO th
 }
 
 // function that changes the body from light to dark and visa versa:
-function toggleMode() {
+function toggleMode(){
     document.body.classList.toggle("darkmode");
-    if (document.body.classList.contains("darkmode")) {
+    if (document.body.classList.contains("darkmode")){
         setIcon("moon");
     } else {
         setIcon("sun");
@@ -37,4 +37,4 @@ function toggleMode() {
 themeToggle.addEventListener("click", toggleMode);
 
 //if the user CHANGES their theme from dark mode into another mode (light), do this:
-prefersDarkQuery.addEventListener("change", toggleMode);
+prefersDarkQuery.addEventListener("change", toggle);
