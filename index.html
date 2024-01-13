@@ -1,171 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="css/stylesheet.css">
-        <script src="https://kit.fontawesome.com/d2216db615.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet"> <!-- Lets do something with fonts later -->
-  </head>
-    
-  <body>
-      
-      <!-- the only errors are related to the h1 and button being inside of a ul... hmm -->
-      <ul class="header">
-            <h1 class="welcome">hi there! // welcome!</h1>
-            <button id="theme-toggle" class="theme-toggle">
-                <i id="sun" class="fa-regular fa-sun"></i>
-                <i id="moon"  class="fa-solid fa-moon hidden"></i>
-            </button>
-            </ul>
-      <ul class="column"> 
-        <!-- NSFW (has sonic and shadow kissing... whoops...)
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <script src="https://kit.fontawesome.com/d2216db615.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <!-- Lets do something with fonts later -->
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="/js/photoswipe/dist/photoswipe.css">
+  <script type="module">
+    import PhotoSwipeLightbox from '/js/photoswipe/dist/photoswipe-lightbox.esm.js';
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('/js/photoswipe/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+  </script>
+</head>
+
+<body>
+
+  <!-- the only errors are related to the h1 and button being inside of a ul... hmm -->
+  <ul class="header">
+    <h1 class="welcome">hi there! // welcome!</h1>
+    <button id="theme-toggle" class="theme-toggle">
+      <i id="sun" class="fa-regular fa-sun"></i>
+      <i id="moon" class="fa-solid fa-moon hidden"></i>
+    </button>
+  </ul>
+  <ul class="column">
+    <!-- NSFW (has sonic and shadow kissing... whoops...)
           <li class="item" style=":hover{}">
           <img src="assets/art/catgirls.GIF" alt="anime catgirl gif showcasing different colors (art by frutti)">
           </li>
         -->
 
-        <!-- I want to make this in the corner as a little logo
+    <!-- I want to make this in the corner as a little logo
           <li class="item">
           <img src="assets/art/Self Portrait Short Hair.jpg" alt="A self portrait (art by frutti)">
           </li>
         -->
 
-          <li class="item">
-          <p>
-            <strong>I'm Francesca.</strong>
-            <br>I'm a former Blizzard intern and a student studying game design! 
-            <br>Feel free to scroll and check out the stuff I've done or visit my <a href="https://francescafrog.itch.io/">itch.io</a>.
-          </p>
-          </li>
+    <li class="item">
+      <p>
+        <strong>I'm Francesca.</strong>
+        <br>I'm a former Blizzard intern and a student studying game design!
+        <br>Feel free to scroll and check out the stuff I've done or visit my <a
+          href="https://francescafrog.itch.io/">itch.io</a>.
+      </p>
+    </li>
 
-          <!--Would be cool to have a visable unmute button. It's hard to know that there's supposed to be audio for this.-->
-          <li class="item">
-          <video controls autoplay loop muted>
-          <source src="assets/videos/Portfolio ScrapMouse Showcase MUSIC.mp4" type="video/mp4">
-          Your browser does not support the video tag.  
-          </video> 
-          </li>
+    <!--Would be cool to have a visable unmute button. It's hard to know that there's supposed to be audio for this.-->
+    <li class="item">
+      <video controls autoplay loop muted>
+        <source src="assets/videos/Portfolio ScrapMouse Showcase MUSIC.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </li>
 
-          <li class="item">
-          <p>
-            <strong>ScrapMouse</strong> is an Overwatch 2 hero that I created during my 2023 internship at Blizzard. 
-            <br>She is a medium-range damage hero who wields a homemade nail gun with a rebar launcher on top.
-            <!--<br>Her playstyle revolves around gaining attack speed with her passive, Havoc, and hitting difficult shots with her Secondary, Rebar Launcher.
+    <li class="item">
+      <p>
+        <strong>ScrapMouse</strong> is an Overwatch 2 hero that I created during my 2023 internship at Blizzard.
+        <br>She is a medium-range damage hero who wields a homemade nail gun with a rebar launcher on top.
+        <!--<br>Her playstyle revolves around gaining attack speed with her passive, Havoc, and hitting difficult shots with her Secondary, Rebar Launcher.
             <br>Her ultimate ability replaces her primary weapon with a saw blade launcher for a few seconds.-->
-            During my time as an intern I became proficient in Overwatch 2's proprietary design scripting language and led playtests for ScrapMouse.
-          </p>
-          </li>
+        During my time as an intern I became proficient in Overwatch 2's proprietary design scripting language and led
+        playtests for ScrapMouse.
+      </p>
+    </li>
 
-          <hr>
-          
-          <li class="item">
-          <p>I'm also a digital artist! Scroll down to check out my art!</p>
-          </li>
+    <hr>
 
-          <li class="item">
+    <li class="item">
+      <p>I'm also a digital artist! Scroll down to check out my art!</p>
+    </li>
+
+    <div class="pswp-gallery gallery" id="gallery">
+      <div class="item">
+        <a href="assets/art/Self Portrait Short Hair.jpg" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Self Portrait Short Hair.jpg" alt="A self portrait (art by frutti)">
-          </li>
+        </a>
+      </div>
 
-          <li class="item">
-          <img src="assets/art/me and leo scott pilgrim.jpg" width=500px alt="Myself and my parnter drawn in the art style of Scott Pilgrim's Precious Little Life (art by frutti)">
-          </li>
+      <div class="item">
+        <a href="assets/art/me and leo scott pilgrim.jpg" data-pswp-width="500" data-pswp-height="500" target="_blank">
+          <img src="assets/art/me and leo scott pilgrim.jpg" width=500px
+            alt="Myself and my partner drawn in the art style of Scott Pilgrim's Precious Little Life (art by frutti)">
+        </a>
+      </div>
 
-          <li class="item">
+      <div class="item">
+        <a href="assets/art/rei.jpg" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/rei.jpg" width=500px alt="Rei Ayanami from Evangelion sitting (art by frutti)">
-          </li>
+        </a>
+      </div>
 
-          <li class="item">
+      <div class="item">
+        <a href="assets/art/Emiru_asuka.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Emiru_asuka.png" alt="Asuka from Evangelion (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/ScrapMouse.jpg" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/ScrapMouse.jpg" alt="An OC of mine named ScrapMouse (art by frutti)">
-          </li>
+        </a>
+      </div>
 
-          <li class="item">
+      <div class="item">
+        <a href="assets/art/Miku_The_Goddess.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Miku_The_Goddess.png" alt="Miku as a goddess (art by frutti)">
-          </li>
+        </a>
+      </div>
 
-          <li class="item">
+      <div class="item">
+        <a href="assets/art/Gwen_Commission.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Gwen_Commission.png" alt="Gwen from League of Legends (art by frutti)">
-          </li>
+        </a>
+      </div>
 
-          <li class="item">
-          <img src="assets/art/KoroneOkayuNichijou.png" alt="Korone and Okayu from Hololive in the style of Nichijou (art by frutti)">
-          </li>
+      <div class="item">
+        <a href="assets/art/KoroneOkayuNichijou.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
+          <img src="assets/art/KoroneOkayuNichijou.png"
+            alt="Korone and Okayu from Hololive in the style of Nichijou (art by frutti)">
+        </a>
+      </div>
 
-          <li class="item">
+      <div class="item">
+        <a href="assets/art/SnowMiku.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/SnowMiku.png" alt="2023 Snow Miku (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Dog_girl_And_Cat_Boy.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Dog_girl_And_Cat_Boy.png" alt="Me and my boyfriend (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Emiru_.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Emiru_.png" alt="Emiru with kirby (art by frutti)">
-          </li>
-          
-          <li class="item">
-          <img src="assets/art/StickersCrySmugPout.png" class="no-background2" alt="Stickers of various emotions (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/StickersCrySmugPout.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
+          <img src="assets/art/StickersCrySmugPout.png" class="no-background2"
+            alt="Stickers of various emotions (art by frutti)">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Untitled_Artwork%201.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Untitled_Artwork%201.png" alt="Black and white realism piece of a woman (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/vtuber_wip.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/vtuber_wip.png" class="no-background1" alt="My vtuber (art by frutti)">
-          </li>
-          
-          <li class="item">
-          <img src="assets/art/emotes_frog_onesie.PNG" class="no-background1" alt="More stickers of emotions, this time wearing a frog suit (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/emotes_frog_onesie.PNG" data-pswp-width="500" data-pswp-height="500" target="_blank">
+          <img src="assets/art/emotes_frog_onesie.PNG" class="no-background1"
+            alt="More stickers of emotions, this time wearing a frog suit (art by frutti)">
+      </div>
+
+      <div class="item">
+        <a href="assets/art/CatgirlVtuber.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/CatgirlVtuber.png" alt="Green haired catgirl (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Leo_Vtuber.PNG" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Leo_Vtuber.PNG" class="no-background1" alt="My boyfriend's vtuber (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/me_and_miku.jpg" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/me_and_miku.jpg" alt="Me and my miku body pillow (art by frutti)">
-          </li>
-          
-          <li class="item">
-          <img src="assets/art/Emillionru.png" alt="Emiru fanart celebrating her reaching 1 million followers on twitch (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Emillionru.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
+          <img src="assets/art/Emillionru.png"
+            alt="Emiru fanart celebrating her reaching 1 million followers on twitch (art by frutti)">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Seyeumi_.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Seyeumi_.png" alt="Twitch streamer Seyeumi (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Untitled_Artwork.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Untitled_Artwork.png" alt="Another realistic black and white portrait (art by frutti)">
-          </li>
-          
-          <li class="item">
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/art/Tinakitten_.png" data-pswp-width="500" data-pswp-height="500" target="_blank">
           <img src="assets/art/Tinakitten_.png" alt="Twitch streamer Tinakitten (art by frutti)">
-          </li>
-          
-          <li class="item">
-          <img src="assets/animation.gif" class="no-background2" alt="Pixel animation of a cat walking on two legs (art by frutti)">
-          </li>
-          
-      </ul>
-      
-        <hr>
-      
-        <footer>
-            <div><a href="#top">back to top</a></div>
-            copyright © 2024 Francesca M.
-        </footer>
-      
-      <script src="js/script.js"></script> 
-  </body>
+        </a>
+      </div>
+
+      <div class="item">
+        <a href="assets/animation.gif" data-pswp-width="500" data-pswp-height="500" target="_blank">
+          <img src="assets/animation.gif" class="no-background2"
+            alt="Pixel animation of a cat walking on two legs (art by frutti)">
+        </a>
+      </div>
+    </div>
+
+  </ul>
+
+  <hr>
+
+  <footer>
+    <div><a href="#top">back to top</a></div>
+    copyright © 2024 Francesca M.
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
 </html>

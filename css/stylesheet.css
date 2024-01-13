@@ -6,252 +6,227 @@
 - make it so when you hover it gives a little explanation
 */
 
-* 
-{
-    margin: 0px;
-    padding: 0px;
-    font-family:  Arial, Helvetica, sans-serif;
-    color: var(--text-color);
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
 }
 
 /* All this stuff is for MOBILE viewing, later, we will make it look nice for tablets and desktop sizes.*/
 
-body
-{
-    background-color : var(--base-color);
+body {
+  background-color: var(--base-color);
 }
 
-h1
-{
-    border: 0px;
-    border-radius: 30px;
-    padding: 20px;
-    text-align: center;
-    background: var(--base-color-dark);
-    width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+h1 {
+  border: 0px;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  background: var(--base-color-dark);
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.header
-{
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    flex-flow: row wrap;
+.header {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-.welcome
-{
-    flex: 2;
-    margin: 20px;
-    margin-right: 10px;
-    max-width: 350px;
+.welcome {
+  flex: 2;
+  margin: 20px;
+  margin-right: 10px;
+  max-width: 350px;
 }
 
-.theme-toggle
-{
-    flex: 1;
-    max-height: 75px;
-    max-width: 75px;
-    margin: 20px;
-    margin-left: 10px;
+.theme-toggle {
+  flex: 1;
+  max-height: 75px;
+  max-width: 75px;
+  margin: 20px;
+  margin-left: 10px;
 }
 
-button
-{
-    font-size: 40px;
-    border: none;
-    background: var(--base-color-dark);
-    border-radius: 50%;
-    /* is this transition good or bad? like does it feel weird when you click it? */
-    transition: 0.3s;
+button {
+  font-size: 40px;
+  border: none;
+  background: var(--base-color-dark);
+  border-radius: 50%;
+  /* is this transition good or bad? like does it feel weird when you click it? */
+  transition: 0.3s;
 }
 
-button:hover
-{
-    background: var(--base-color-darker);
+button:hover {
+  background: var(--base-color-darker);
 }
 
-li
-{
-    list-style: none;
+li {
+  list-style: none;
 }
 
-a
-{
-    color: var(--base-color-darkest);
-    font-weight: bold;
-    text-decoration: underline;
+a {
+  color: var(--base-color-darkest);
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-a:hover
-{
-    text-decoration: none; 
+a:hover {
+  text-decoration: none;
 }
 
-.item a
-{
-    color: var(--link-color);
+.item a {
+  color: var(--link-color);
 }
 
-.item a:hover
-{
-    /* color: var(--accent-color-light); */
-    text-decoration: none; 
+.item a:hover {
+  /* color: var(--accent-color-light); */
+  text-decoration: none;
 }
 
-img, video
-{
-    width: 100%;
-    height: auto;
-    max-height: 40em;
-    object-fit: contain;
+img,
+video {
+  width: 100%;
+  height: auto;
+  max-height: 40em;
+  object-fit: contain;
 }
 
-mark
-{
-    background-color: var(--mark-color);
-    /*color: var(--base-color);*/
-    padding: 4px;
-    margin: 1px;
-    border-radius: 6px;
-    font-weight: bold;
+mark {
+  background-color: var(--mark-color);
+  /*color: var(--base-color);*/
+  padding: 4px;
+  margin: 1px;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
-strong
-{
-    font-weight: bold;
-    font-size: 115%;
-    color: var(--main-color-dark);
+strong {
+  font-weight: bold;
+  font-size: 115%;
+  color: var(--main-color-dark);
 }
 
-hr
-{
-    border-style: solid;
-    color: var(--base-color-dark);
-    margin: 35px 20%;
-    border-width: 2px;
-    border-radius: 5px;
+hr {
+  border-style: solid;
+  color: var(--base-color-dark);
+  margin: 35px 20%;
+  border-width: 2px;
+  border-radius: 5px;
 }
 
-footer
-{
-    text-align: center;
-    font-style: italic;
-    margin: 20px;
-    line-height: 1.5;
+footer {
+  text-align: center;
+  font-style: italic;
+  margin: 20px;
+  line-height: 1.5;
 }
 
 /* FLEX BOXES */
 
-.column
-{
-    display: flex;
-    flex-direction: column;
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
-.item
-{
-    margin: 10px 5%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
 }
 
-.item img
-{
-    border-radius: 30px;
+.item {
+  margin: 10px 5%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.item video
-{
-    border-radius: 30px;
+.item img {
+  border-radius: 30px;
 }
 
-.item p
-{
-    padding: 30px;
-    color: var(--base-color);
-    background-color: var(--main-color);
-    border-radius: 30px;
-    line-height: 1.5;
-    font-size: 20px;
-    color: var(--main-color-dark);
-    text-align: center;
+.item video {
+  border-radius: 30px;
+}
+
+.item p {
+  padding: 30px;
+  color: var(--base-color);
+  background-color: var(--main-color);
+  border-radius: 30px;
+  line-height: 1.5;
+  font-size: 20px;
+  color: var(--main-color-dark);
+  text-align: center;
 }
 
 /* OTHER SCREEN SIZES */
 
-/* Tablet display */ 
+/* Tablet display */
 
-@media screen and (min-width: 786px)
-{
-    
-    .item
-    {
-        flex: 1;
-        min-width: 400px;
-        max-width: 50%;
-    }
+@media screen and (min-width: 786px) {
+  .item {
+    flex: 1;
+    min-width: 400px;
+    max-width: 50%;
+  }
 }
 
-
-.no-background1
-{
-    background-color: var(--main-color-light);
+.no-background1 {
+  background-color: var(--main-color-light);
 }
 
-.no-background2
-{
-    background-color: var(--accent-color);
+.no-background2 {
+  background-color: var(--accent-color);
 }
 
-.hidden
-{
-    display: none !important;
+.hidden {
+  display: none !important;
 }
 
 /* 
 VARIABLES 
 */
 
-:root
-{
-    --accent-color: #ACDCF7;
-    --accent-color-dark: #6DAFED;
+:root {
+  --accent-color: #acdcf7;
+  --accent-color-dark: #6dafed;
 }
-
 
 /* LIGHT THEME / DARK THEME */
 
-body /* light mode */
-{
-    /* COLORS */
-    --main-color-light: #b3d4ff;
-    --main-color: #93b5ff;
-    --main-color-dark: #0d1580;
-    --link-color:#5451ee;
-    --base-color: #f7f7f7;
-    --base-color-dark: #E0E0E0;
-    --base-color-darker: #D0D0D0;
-    --base-color-darkest: #838383;
-    --text-color: #070707;
-    --mark-color: #fff48f;
-    transition: background 0.2s ease-in;
+body /* light mode */ {
+  /* COLORS */
+  --main-color-light: #b3d4ff;
+  --main-color: #93b5ff;
+  --main-color-dark: #0d1580;
+  --link-color: #5451ee;
+  --base-color: #f7f7f7;
+  --base-color-dark: #e0e0e0;
+  --base-color-darker: #d0d0d0;
+  --base-color-darkest: #838383;
+  --text-color: #070707;
+  --mark-color: #fff48f;
+  transition: background 0.2s ease-in;
 }
 
-body.darkmode
-{
-    /* COLORS */
-    --main-color-light: #97c8f7;
-    --main-color: #3f4aad;
-    --main-color-dark: #d7e7ff;
-    --link-color:#a4adff;
-    --base-color: #272727;
-    --base-color-dark: #474747;
-    --base-color-darker: #676767;
-    --base-color-darkest: #a0a0a0;
-    --text-color: #f7f7f7;
-    --mark-color: #87adf3; /* not set up yet */
+body.darkmode {
+  /* COLORS */
+  --main-color-light: #97c8f7;
+  --main-color: #3f4aad;
+  --main-color-dark: #d7e7ff;
+  --link-color: #a4adff;
+  --base-color: #272727;
+  --base-color-dark: #474747;
+  --base-color-darker: #676767;
+  --base-color-darkest: #a0a0a0;
+  --text-color: #f7f7f7;
+  --mark-color: #87adf3; /* not set up yet */
 }
